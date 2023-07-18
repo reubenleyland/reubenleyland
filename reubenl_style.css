@@ -1,0 +1,65 @@
+
+
+.image-style {
+    display: flex;
+    align-items: center;
+
+}
+
+.image-style img {
+    width: 150px;
+    margin-right: 10px; /* Add spacing between the image and text */
+}
+
+.image-style img {
+  border-radius: 50%;
+}
+
+.second-image-style {
+    display: flex;
+    align-items: center;
+}
+
+.second-image-style img {
+    width: 150px;
+    margin-right: 10px;
+}
+
+/* Override the border-radius property for the second class */
+.second-image-style img {
+    border-radius: initial; /* or use "border-radius: 0;" to remove the rounded border */
+}
+
+
+.smaller-title {
+    font-size: 18px;
+    text-align: leftv;
+    font-family: sans-serif
+    font-weight: bolder;
+}
+
+.title {
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.content {
+  font-family: sans-serif;
+  font-size-adjust: auto;
+  font-variant: normal;
+
+}
+
+
+
+.spacer {
+    margin-bottom: 50px; /* Adds margin space below the element */
+    padding-top: 10px; /* Adds padding space above the element */
+  }
+
+
+  .spacer-smaller {
+      margin-bottom: 20px; /* Adds margin space below the element */
+      padding-top: 10px; /* Adds padding space above the element */
+    }
