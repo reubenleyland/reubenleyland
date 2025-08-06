@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Your Name</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#misc">Misc</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-image">
+                <img src="your-image.jpg" alt="Your Name">
+            </div>
+            <h1>Your Name</h1>
+            <p>Your Current Title</p>
+            <p>Your Education</p>
+            <p id="email"></p>
+            <div class="social-links">
+                <a href="your-cv.pdf" class="social-link"><i class="fas fa-file-alt"></i></a>
+                <a href="https://twitter.com/your-twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/your-github" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com/citations?user=your-google-scholar-id" class="social-link"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.linkedin.com/in/your-linkedin/" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Write a paragraph about yourself here.</p>
+                <p>Include details about your education and previous experiences.</p>
+                <p>You can also mention your hobbies or other personal interests.</p>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Your Current Role</h3>
+                    <p class="date">Start Date - Present | City, Country</p>
+                    <p>Description of your role and responsibilities.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Your Previous Role</h3>
+                    <p class="date">Start Date - End Date | City, Country</p>
+                    <p>Description of your previous role.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="research">
+            <h2>Research</h2>
+            <div class="research-content">
+                <div class="publication">
+                    <h3>Publication Title</h3>
+                    <p class="authors">Your Name, Co-Author 1, Co-Author 2</p>
+                    <p class="venue">Conference or Journal, Year</p>
+                    <div class="button-group">
+                        <button onclick="toggleSummary(event)">summary</button>
+                        <button onclick="window.open('link-to-project-page', '_blank')">project page</button>
+                        <button onclick="window.open('link-to-paper', '_blank')">paper</button>
+                    </div>
+                    <div class="summary">
+                        <p>A brief summary of your research.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="misc" class="misc">
+            <h2>Misc</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Teaching</h3>
+                    <p style="margin: 4px 0;">List the courses or subjects you have taught.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Awards</h3>
+                    <p style="margin: 4px 0;">• List your awards and achievements here.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Random</h3>
+                    <p style="margin: 4px 0;">• Share some fun facts or interesting tidbits about yourself.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleSummary(event) {
+            event.preventDefault();
+            const button = event.target;
+            const summary = button.parentElement.nextElementSibling;
+            
+            if (summary.style.display === 'none' || summary.style.display === '') {
+                summary.style.display = 'block';
+                button.textContent = 'hide summary';
+            } else {
+                summary.style.display = 'none';
+                button.textContent = 'summary';
+            }
+        }
+
+        // Email protection
+        window.onload = function() {
+            const parts = ['your', '.', 'email', '@', 'example', '.', 'com'];
+            const emailElement = document.getElementById('email');
+            emailElement.textContent = parts.join('');
+            emailElement.innerHTML = `<a href="mailto:${parts.join('')}" style="color: inherit; text-decoration: none;">${parts.join('')}</a>`;
+        }
+    </script>
+</body>
+</html>
