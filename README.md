@@ -1,3 +1,5 @@
-Patent Attorney @HLK\\
-MEng EngSci @Oxford\\
-reuben.leyland@sky.com
+Patent Attorney @HLK
+
+MEng EngSci @Oxford
+
+contact: reuben.leyland@sky.com
